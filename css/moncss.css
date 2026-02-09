@@ -1,0 +1,255 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* En-tête */
+.header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Navigation */
+nav {
+    background: #444;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ol {
+    list-style: none;
+    padding: 0;
+}
+
+nav ol li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ol li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ol li a:hover {
+    color: #ffcc00;
+}
+
+/* Pied de page */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.passion {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    padding: 15px;
+}
+
+.passion img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.passion h2 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.passion p {
+    color: #555;
+}
+
+h2{
+    text-align: center;
+}
+
+.competences-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px; /* Augmenté pour mieux utiliser l'écran */
+    margin: auto;
+    flex-wrap: nowrap; /* Empêche le passage à la ligne */
+}
+
+.competence-column {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%; /* Ajusté pour tenir en 2 colonnes */
+    min-width: 400px; /* Empêche qu'elles deviennent trop étroites */
+    line-height: 1.6;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 900px) {
+    .competences-grid {
+        flex-wrap: wrap; /* Permet de repasser en mode empilé si l'écran est trop petit */
+    }
+    .competence-column {
+        width: 100%; /* Les colonnes prennent toute la largeur en petit écran */
+    }
+}
+
+
+.formation {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.formation h2 {
+    color: #333;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.formation-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.formation-item h3 {
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.formation-item p {
+    color: #555;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+.iut-logo {
+    max-width: 250px; /* Taille max du logo */
+    display: block;
+    margin: 10px auto; /* Centre l’image */
+    border-radius: 10px; /* Bords arrondis si tu veux */
+}
+
+.presentation {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border: 3px solid #444;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.atouts {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.atouts li {
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.atouts i {
+    color: #007bff;
+}
+
+.formation-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ambition-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.formation-item h3 {
+    color: #222;
+    margin: 0;
+}
+
+.formation-item p {
+    color: #555;
+    font-size: 16px;
+}
