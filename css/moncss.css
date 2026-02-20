@@ -168,7 +168,7 @@ footer {
 }
 
 .passion {
-    width: min(320px, 100%);
+    width: 100%;
     text-align: center;
 }
 
@@ -180,11 +180,86 @@ footer {
     margin-bottom: 12px;
 }
 
+.passions-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
 .competences-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
     width: 100%;
+}
+
+.competences-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.competence-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    border: 1px solid rgba(60, 110, 113, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.competence-card h2 {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+
+.competence-card p {
+    margin: 0;
+}
+
+.tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg);
+    border: 1px solid rgba(40, 75, 82, 0.15);
+    border-radius: 999px;
+    padding: 6px 10px;
+}
+
+.tech-badge img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.tech-badge figcaption {
+    font-size: 0.88rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.tech-placeholder {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
 }
 
 .competence-column h2 {
@@ -263,12 +338,71 @@ footer {
 }
 
 .projets-section {
-    width: min(900px, 100%);
-    margin: 0 auto 40px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .projets-section h2 {
     margin-bottom: 24px;
+}
+
+.projets-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.projet-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    border: 1px solid rgba(60, 110, 113, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projet-card h3 {
+    margin-bottom: 4px;
+}
+
+.experience-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.experience-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    border: 1px solid rgba(60, 110, 113, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.experience-card h2,
+.experience-card h3 {
+    margin-bottom: 0;
+}
+
+.experience-meta {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.experience-list {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    display: grid;
+    gap: 8px;
 }
 
 @media (hover: hover) {
@@ -276,7 +410,9 @@ footer {
     .formation:hover,
     .passion:hover,
     .competence-column:hover,
-    .projets-section:hover {
+    .competence-card:hover,
+    .experience-card:hover,
+    .projet-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 16px 40px rgba(40, 35, 25, 0.18);
     }
@@ -305,6 +441,22 @@ footer {
 
     .formation-ambitions .formation-item .ambition-img {
         margin: 0 auto;
+    }
+
+    .competence-card {
+        padding: 16px;
+    }
+
+    .tech-badge figcaption {
+        font-size: 0.84rem;
+    }
+
+    .projet-card {
+        padding: 16px;
+    }
+
+    .experience-card {
+        padding: 16px;
     }
 }
 
